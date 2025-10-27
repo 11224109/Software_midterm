@@ -1,28 +1,40 @@
 # 如何藉助GPT搭建微信小程式？
 
-<li><b>開發所用工具</b></li>  
-  1.微信小程序<br/>      
-  2.chatGPT <br/>       
-<br/>
+一、開發所用工具<br/>
 
-`我們接下來要利用<b>chaptGPT</b>來開發<b>微信小程式</b>!`
+  1.微信小程序      
+  2.chatGPT      
 
-chaptGPT是一款神奇的代碼生成器，它可以讓你用最簡單的方式，創建出最精彩的小程式。 你只需要輸入你想要的功能和效果，chaptGPT就會為你生成合適的代碼，無論是登錄註冊頁面，還是後台伺服器，它都能輕鬆搞定，效果展示如下：
+我們接下來要用 <b>chaptGPT</b> 來幫我們開發一個<b>微信小程式</b>！  
+它是一個非常強大的代碼生成器，只要輸入你想要的功能和風格，  
+它就能幫你自動產出對應的程式碼。  
+無論是登入註冊頁面，還是後台伺服器部分，它都能輕鬆搞定。  
+
+二、ChatGPT 生成的頁面效果展示  
+
+一開始，我讓 ChatGPT 幫我生成登入註冊的畫面。  
+效果如下：
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/1.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/2.png?raw=true)
 
-<b>關於如何實現圖中展示的效果，讓我來給你詳細介紹一下吧：</b>
-<li><b>登錄註冊頁面：</b>你只需要告訴chaptGPT你想要的頁面風格和佈局，比如簡約、清新、炫酷等，chaptGPT就會為你生成相應的代碼，讓你的頁面美觀和易用。</li>
+三、登入註冊頁面設計  
+
+接著我們就來看看要怎麼實現這個效果吧！  
+我只需要告訴 ChatGPT 想要的頁面風格與布局，例如簡約、清新、炫酷等風格，它就會生成相對應的代碼。  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/3.png?raw=true)
 
-將代碼複製拷貝到微信小程序開發工具，運行效果如下：
+將代碼複製拷貝到微信小程序開發工具，執行效果如下：
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/4.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/5.png?raw=true)
 
-下面通過調整參數和屬性，來修改頁面的顏色、字體、大小、位置等，讓你的頁面更符合你的品味和喜好。 首先，我們讓chaptGPT幫我們添加一些樣式：
+四、樣式調整與個性化設計  
+
+接下來，我們可以透過修改屬性與樣式，來微調頁面的顏色、字體、大小、位置等，讓介面更符合個人風格。  
+
+我先請 ChatGPT 幫我加上一些樣式設定：  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/6.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/7.png?raw=true)
@@ -31,22 +43,25 @@ chaptGPT是一款神奇的代碼生成器，它可以讓你用最簡單的方式
 我們來看一下效果：
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/9.png?raw=true)
-```
-大家會發現標題的字體顏色和大小發生了變化，以及內部元件排列的樣式也發生了變化，比如“使用者名”元件和“請輸入使用者名”元件由垂直排列變成了水平排列，符合登入介面採用的布局樣式。
 
-細心的小夥伴或許還會發現，最初生成的介面似乎帶有一些樣式效果，這是為什麼呢？
+這時候標題字體變大、顏色變亮，而且「使用者名」與「請輸入使用者名」這兩個元件也改成了水平排列，更符合一般登入介面的常見布局。  
 
-因為在微信小程序申存在全域樣式，被放置在app . wxss檔中，其中有一個預設的類為container，裡面初始化定義了一些樣式，利用chaptGPT生成WXML代碼時，在元件內給我們生成了這個類名，所以會帶有一些基本的樣式。 從這裡也能看出chaptGPT真的很厲害，這下小夥伴們應該明白了吧。
-```
+事實上，最初的畫面會有一些預設樣式，那是因為微信小程式有全域樣式設定，存在於 app.wxss 中。  
+其中一個常見的類別叫做 container，ChatGPT 在生成 WXML 時就自動加上這個類別，所以會有基礎樣式。  
+這點真的很貼心，也說明了 ChatGPT 的智能程度。  
 
-`如果對生成的樣式不喜歡，比如，輸入框的顏色。 那麼，這裡就需要我們簡單動一下小手指修改一下樣式就可以了。 我們可以在調整「輸入框顏色」樣式的代碼部分將元件的顏色改變就可以了。 類似的我們還可以進行其他的修改和調整，趕緊去嘗試一下吧！`
+五、樣式微調範例  
 
+如果你對輸入框的顏色或其他細節不太滿意，只要簡單修改相對應的樣式代碼就能完成。  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/10.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/11.png?raw=true)
 
 
-如果有顯示其他語言的需要，那麼我們可以告訴chaptGPT修改成需要的語言，例如將中文修改成英文。
+六、多語言版本設計  
+
+如果你想讓頁面顯示英文版本，也沒問題。  
+只要告訴 ChatGPT 把中文改成英文，它就能自動幫你轉換。  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/12.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/13.png?raw=true)
@@ -58,8 +73,10 @@ chaptGPT是一款神奇的代碼生成器，它可以讓你用最簡單的方式
 
 
 
-<li><b>登入註冊功能：</b>你只需要告訴chaptGPT你想要的登入註冊方式，比如手機號、郵箱、微信等，chaptGPT就會為你生成相應的代碼，讓你的功能完善和安全。 你還可以通過添加條件和邏輯，來實現更多的功能，比如驗證碼、密碼強度、用戶協定等，讓你的功能更豐富和人性化。</li>
+七、登入與註冊功能實作  
 
+接下來進入重頭戲——登入與註冊的功能部分。  我只要告訴 ChatGPT 想要哪種登入方式（手機號、郵箱、微信帳號等），它就能生成完整代碼。  
+還能根據條件新增驗證碼、密碼強度檢查或使用者協定等細節。  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/15.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/16.png?raw=true)
@@ -69,9 +86,9 @@ chaptGPT是一款神奇的代碼生成器，它可以讓你用最簡單的方式
 ![image](https://github.com/11224109/Software_midterm/blob/main/20.png?raw=true)
 
 
+把這些代碼放進開發工具後，點擊登入或註冊按鈕，就會觸發對應js中的事件函數來，來完成登入或註冊的功能。  
 
-
-將代碼複製到微信開發工具中，點擊登入或註冊按鈕就會調用js中的事件函數來完成登入註冊相應的功能。 點擊登入和註冊按鈕顯示效果分別如下：
+登入與註冊的執行畫面如下：  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/21.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/22.png?raw=true)
@@ -83,25 +100,41 @@ chaptGPT是一款神奇的代碼生成器，它可以讓你用最簡單的方式
 ![image](https://github.com/11224109/Software_midterm/blob/main/24.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/25.png?raw=true)
 
-`如果帳號註冊過，會顯示提示。`
+如果帳號已經被註冊過，也會自動顯示提示訊息。  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/26.png?raw=true)
 
-<li><b>引導chaptGPT：</b>你只需要向chaptGPT提出問題和建議，比如“我想要實現這個功能”，“我想要改變這個效果”，“我想要優化這個代碼”等，chaptGPT就會根據你的輸入和反饋，自動調整和優化代碼，讓你的代碼更合理和高效。 你還可以通過查看代碼的註釋和解釋，來學習chaptGPT的思路和方法，讓你的程式設計水平和創造力得到提升。</li>
+八、與 ChatGPT 的互動技巧  
+
+使用 ChatGPT 寫程式時，我發現有個小訣竅非常實用：  
+在進入主要任務前，先和它「暖機」一下！  
+例如可以問它「你會寫代碼嗎？」、「會用哪種語言？」、「HTML 跟 WXML 有什麼差別？」等等。  
+
+這樣能讓 ChatGPT 更快「進入開發模式」，接下來生成代碼的品質也會更高。  
 
 ![image](https://github.com/11224109/Software_midterm/blob/main/27.png?raw=true)
 ![image](https://github.com/11224109/Software_midterm/blob/main/28.png?raw=true)
 
 
-在使用chaptGPT生成代碼的時候，我發現除了使用合適的prompt外，如果能與chaptGPT先聊幾句有關的話題，後續再進行主要任務詢問，效果會好一些。
+我自己一開始問它直接寫 WXML，它回答「不熟悉」，結果只給了介紹文字。  
+但我後來改成請它先生成 HTML，再轉換成 WXML，竟然能成功執行！  
+再試幾次後，它甚至直接幫我生成原生 WXML。  
+真的超神奇～  
 
-比如，我們可以先問chaptGPT會不會寫代碼、會使用什麼語言寫代碼、HTML與WXML的區別等，來讓其慢慢關注到相應的領域。
+九、後台伺服器與延伸工具  
 
-分享一個案例：我最初直接詢問讓chaptGPT寫WXML代碼時，它會告訴我它不熟悉，然後只輸出一些相關的介紹，我覺得可能它真的不會，我就通過讓它生成HTML代碼，然後再讓它修改成WXML代碼，複製到微信開發者工具后也可以運行，但是總覺得不太好。 然後，我又嘗試詢問一次，發現竟然輸出了WXML代碼，讓我眼前一亮，效果特別好。
+目前我們做的部分屬於前端。  
+如果想再進一步處理後端伺服器邏輯，依然可以用 ChatGPT 來加速開發流程。  
 
-```
-<li><b>後台伺服器：</b>前面介紹生成的代碼屬於微信小程式的前端，其還有後端伺服器處理代碼。 我們依然可以利用chaptGPT幫我們加快開發進程。 同時，亞馬遜也推出了codeWhisperer工具，可以集成到多種編輯器中，根據提示直接生成代碼，目前只支援熱門語言代碼的編寫。 因此，微信小程式後端代碼的生成，可以利用該工具。 如果可能後續會給出利用codeWhisperer工具協助編寫微信小程式後端服務代碼。</li>
-```
+另外，Amazon 推出了 CodeWhisperer 工具，它可以整合到多種編輯器中，根據提示自動生成程式碼，目前支援多種主流語言，非常適合用在後端開發。  
 
-chaptGPT不僅可以幫你節省時間和精力，還可以幫你提高程式設計水平和創造力，讓你在微信小程序開發中脫穎而出。 chaptGPT是你開發微信小程式的最佳夥伴，趕快來體驗它的魔力吧！ 
-`（一般人我不告訴他，文案部分也基本由chaptGPT生成的）`
+未來我們也能結合這兩個工具，打造前後端一體的小程式系統。  
+
+十、結語  
+
+ChatGPT 不僅能幫你省下大量時間與精力，還能提升你的程式設計能力與創造力。  
+它真的就像是一位「永遠不累的開發夥伴」。  
+
+快去體驗一下 ChatGPT 的魔力吧，你會發現做微信小程式其實一點都不難！  
+
+（小聲說：這篇文案很多段落，其實也是 ChatGPT 幫我寫的呢 😄）  
