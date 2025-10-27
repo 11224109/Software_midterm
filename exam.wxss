@@ -1,0 +1,81 @@
+/* 整個頁面的基本樣式設定 */
+page {
+  background-color: #f6f7fb; /* 淺灰藍背景，營造柔和氛圍 */
+  display: flex; /* 使用 Flex 置中佈局 */
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  min-height: 100vh; /* 讓內容至少占滿整個視窗高度 */
+}
+
+/* 登入卡片容器 */
+.card {
+  background-color: #ffffff; /* 白色背景，與外層灰色形成對比 */
+  width: 90%; /* 寬度為螢幕的 90% */
+  max-width: 600rpx; /* 設定最大寬度，避免太大 */
+  padding: 60rpx 50rpx; /* 內距，讓內容不貼邊 */
+  border-radius: 20rpx; /* 圓角邊框，讓卡片更柔和 */
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.05); /* 陰影效果，讓卡片浮起來 */
+}
+
+/* 標題文字（例如：登入、註冊） */
+.title {
+  text-align: center; /* 文字置中 */
+  font-size: 40rpx; /* 字體大小 */
+  font-weight: 600; /* 字重略粗，凸顯標題 */
+  color: #333; /* 深灰文字顏色 */
+  margin-bottom: 60rpx; /* 與下一區塊保持距離 */
+}
+
+/* 單個輸入欄位區塊 */
+.form-item {
+  margin-bottom: 40rpx; /* 每個輸入框之間的距離 */
+}
+
+/* 輸入框樣式 */
+.input {
+  width: 90%; /* 寬度為父層的 90% */
+  border: 1rpx solid #ddd; /* 淺灰邊框 */
+  border-radius: 12rpx; /* 輕微圓角 */
+  padding: 25rpx 30rpx; /* 內距，增加輸入空間 */
+  font-size: 30rpx; /* 字體大小 */
+  background-color: #e2f7c6; /* 淺綠背景，讓輸入框區分出來 */
+  transition: all 0.3s; /* 讓聚焦時的變化更平滑 */
+}
+
+/* 按鈕通用樣式 */
+.btn {
+  width: 100%; /* 滿版按鈕 */
+  border: none; /* 移除預設邊框 */
+  border-radius: 12rpx; /* 圓角按鈕 */
+  padding: 28rpx 0; /* 上下間距 */
+  font-size: 32rpx; /* 字體大小 */
+  font-weight: 500; /* 字重稍粗 */
+}
+
+/* 主要按鈕（例如登入或註冊） */
+.primary-btn {
+  background-color: #1aad19; /* 微信綠主色 */
+  color: #fff; /* 白色文字 */
+  box-shadow: 0 6rpx 12rpx rgba(26, 173, 25, 0.3); /* 綠色陰影，凸顯按鈕 */
+}
+
+/* 分隔線（登入／註冊切換區） */
+.divider {
+  height: 1rpx; /* 細線高度 */
+  background-color: #eaeaea; /* 淺灰色線條 */
+  margin: 50rpx 0 30rpx; /* 與上下內容保持距離 */
+}
+
+/* 切換提示文字（例如「還沒有帳號？註冊」） */
+.switch {
+  text-align: center; /* 文字置中 */
+  font-size: 28rpx; /* 字體大小 */
+  color: #666; /* 中灰文字色 */
+}
+
+/* 可點擊連結文字（例如註冊／登入切換按鈕） */
+.link {
+  color: #1aad19; /* 主題綠色 */
+  margin-left: 10rpx; /* 與前方文字保持一點距離 */
+  font-weight: 500; /* 字體略粗，讓連結更明顯 */
+}

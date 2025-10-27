@@ -1,0 +1,70 @@
+<!-- Main Page Container -->
+<view class="page">
+  <!-- Login / Register Card -->
+  <view class="card">
+
+    <!-- Title -->
+    <view class="title">{{ isLogin ? 'Login Account' : 'Create New Account' }}</view>
+
+    <!-- Form Section -->
+    <form bindsubmit="handleSubmit">
+
+      <!-- Username Input -->
+      <view class="form-item">
+        <input 
+          placeholder="Username / Account" 
+          value="{{username}}" 
+          bindinput="onInput" 
+          data-field="username"
+          class="input"
+        />
+      </view>
+
+      <!-- Password Input -->
+      <view class="form-item">
+        <input 
+          placeholder="Password" 
+          password 
+          value="{{password}}" 
+          bindinput="onInput" 
+          data-field="password"
+          class="input"
+        />
+      </view>
+
+      <!-- Confirm Password (Only for Register) -->
+      <view wx:if="{{!isLogin}}" class="form-item">
+        <input 
+          placeholder="Confirm Password" 
+          password 
+          value="{{confirmPassword}}" 
+          bindinput="onInput" 
+          data-field="confirmPassword"
+          class="input"
+        />
+      </view>
+
+      <!-- Submit Button -->
+      <button formType="submit" class="btn primary-btn" loading="{{loading}}">
+        {{ isLogin ? 'Login' : 'Register' }}
+      </button>
+    </form>
+
+    <!-- Login/Register Result Display -->
+    <view wx:if="{{message}}" class="message {{ messageType }}">
+      {{ message }}
+    </view>
+
+    <!-- Divider Line -->
+    <view class="divider"></view>
+
+    <!-- Mode Switch: Login <-> Register -->
+    <view class="switch">
+      <text>{{ isLogin ? "Don't have an account?" : "Already have an account?" }}</text>
+      <text class="link" bindtap="toggleMode">
+        {{ isLogin ? 'Register here' : 'Login here' }}
+      </text>
+    </view>
+
+  </view>
+</view>
